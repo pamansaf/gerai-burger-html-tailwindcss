@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+
+    <!-- font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Remix icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- swiper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
+
+    <!-- css -->
+    <link href="./output.css" rel="stylesheet" />
+
+    <title>Burger Website</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header" class="bg-primaryColor dark:bg-darkColor fixed top-0 left-0 w-full z-50">
+      <nav class="container relative h-14 flex justify-between items-center">
+        <div>
+          <a href="#" class="text-2xl uppercase font-oswald"
+            >Bur<span class="text-secondaryColor">ger</span>
+          </a>
+        </div>
+        <div
+          class="hidden absolute top-0 left-0 w-full py-14 bg-primaryColor dark:bg-darkColor border-b border-secondaryColor md:block md:static md:py-0 md:border-none md:w-auto md:ml-auto"
+          id="nav-menu"
+        >
+          <ul class="flex flex-col text-center gap-5 md:flex-row">
+            <li>
+              <a href="#home" class="nav__link text-secondaryColor hover:text-secondaryColor"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="nav__link hover:text-secondaryColor ease-in duration-200"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#menu"
+                class="nav__link hover:text-secondaryColor ease-in duration-200"
+                >Menu</a
+              >
+            </li>
+            <li>
+              <a
+                href="#review"
+                class="nav__link hover:text-secondaryColor ease-in duration-200"
+                >Review</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="nav__link hover:text-secondaryColor ease-in duration-200"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div
+            class="absolute top-[0.7rem] right-4 text-2xl cursor-pointer md:hidden"
+            id="nav-close"
+          >
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+        <div class="flex items-center gap-5">
+          <i class="ri-moon-line ml-4 text-xl cursor-pointer" id="theme-toggle"></i>
+          <div id="hamburger" class="md:hidden">
+            <i class="ri-menu-2-line text-xl cursor-pointer"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Home -->
+      <section id="home">
+        <div class="container flex flex-col items-center gap-10 md:flex-row">
+          <div class="mx-auto md:basis-1/2 lg:basis-2/5 animate-movingY">
+            <img
+              src="img/burger1.png"
+              alt="burger"
+              class="home__image w-max rounded-lg md:w-full"
+            />
+          </div>
+          <div class="home__content text-center md:basis-1/2 md:text-start lg:basis-3/5">
+            <h1 class="home__title">HAPPY TUMMY WITH TASTY Burger</h1>
+            <div class="separator mx-auto md:mx-0"></div>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam
+              esse ut architecto fugit nesciunt ea temporibus, doloribus odit
+              non enim id deserunt vero quia officiis fuga repudiandae ipsam
+              dolores laborum quod mollitia ullam? Laborum.
+            </p>
+            <div
+              class="text-base flex items-center justify-center gap-4 py-10 lg:justify-start lg:gap-10"
+            >
+              <div class="text-center">
+                <i
+                  class="fa-solid fa-utensils text-secondaryColor text-4xl"
+                ></i>
+                <br />
+                Delicious
+              </div>
+              <div class="text-center">
+                <i class="fa-solid fa-droplet text-secondaryColor text-4xl"></i>
+                <br />
+                Fresh
+              </div>
+              <div class="text-center">
+                <i class="fa-brands fa-envira text-secondaryColor text-4xl"></i>
+                <br />
+                Organic
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary">Learn more</a>
+            
+          </div>
+        </div>
+      </section>
+      <!-- Category -->
+      <section id="category">
+        <div class="container flex flex-col gap-5 md:flex-row">
+          <!-- card 1 -->
+          <div
+            class="category__card bg-redColor p-3 flex gap-5 rounded-lg md:flex-col lg:flex-row" 
+          >
+            <div class="basis-1/4">
+              <img
+                src="img/burger5.jpg"
+                alt="burger"
+                class="rounded-lg"
+              />
+            </div>
+            <div>
+              <div>
+                <h4 class="card__title">Foods</h4>
+                <p class="text-xs">Lorem ipsum dolor sit amet.</p>
+                <p class="text-xs">Rp. 35.000,-</p>
+              </div>
+              <a href="#" class="text-black text-xs cursor-pointer hover:font-bold hover:underline">By Online</a>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div
+            class="category__card bg-secondaryColor p-3 flex gap-5 rounded-lg md:flex-col lg:flex-row" 
+          >
+            <div class="basis-1/4">
+              <img
+                src="img/snack2.jpg"
+                alt="burger"
+                class="rounded-lg"
+              />
+            </div>
+            <div>
+              <div>
+                <h4 class="card__title">Snacks</h4>
+                <p class="text-xs">Lorem ipsum dolor sit amet.</p>
+                <p class="text-xs">Rp. 15.000,-</p>
+              </div>
+              <a href="#" class="text-black text-xs cursor-pointer hover:font-bold hover:underline">By Online</a>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div
+            class="category__card bg-greenColor p-3 flex gap-5 rounded-lg md:flex-col lg:flex-row" 
+          >
+            <div class="basis-1/4">
+              <img
+                src="img/minuman1.jpg"
+                alt="burger"
+                class="rounded-lg"
+              />
+            </div>
+            <div>
+              <div>
+                <h4 class="card__title">Drinks</h4>
+                <p class="text-xs">Lorem ipsum dolor sit amet.</p>
+                <p class="text-xs">Rp. 35.000,-</p>
+              </div>
+              <a href="#" class="text-black text-xs cursor-pointer hover:font-bold hover:underline">By Online</a>
+            </div>
+          </div>
+         
+          
+      </section>
+      <!-- Promo -->
+      <section id="promo">
+        <div class="container flex flex-col gap-5 md:gap-5 md:flex-col lg:flex-row lg:gap-5">
+          <!-- card 1 -->
+          <div
+            class="promo__card-1 bg-primaryColorLight dark:bg-darkColorLight flex flex-col p-5 rounded-lg md:flex-row md:gap-5 lg:flex-row-reverse lg:gap-5"
+          >
+            <img
+              src="img/burger3.jpg"
+              alt="burger"
+              class="mx-auto rounded-lg hover:animate-movingY md:w-1/4 lg:w-2/5"
+             />
+            <div class="space-y-2 pt-5 md:flex-1 lg:flex-1">
+              <p class="text-xs text-secondaryColor">Payday promo</p>
+              <h3 class="card__title">get A 10% Discount on payday week</h3>
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Adipisci!
+              </p>
+              <a href="#" class="text-xs text-secondaryColor">Buy Online</a>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div
+            class="promo__card-2 bg-primaryColorLight dark:bg-darkColorLight flex flex-col p-5 rounded-lg md:flex-row md:gap-5 lg:flex-row-reverse lg:gap-5"
+          >
+            <img
+              src="img/minuman2.jpg"
+              alt="burger"
+              class="mx-auto rounded-lg hover:animate-movingY md:w-1/4 lg:w-2/5"
+             />
+            <div class="space-y-2 pt-5 md:flex-1 lg:flex-1">
+              <p class="text-xs text-secondaryColor">Payday promo</p>
+              <h3 class="card__title">get A 10% Discount on payday week</h3>
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Adipisci!
+              </p>
+              <a href="#" class="text-xs text-secondaryColor">Buy Online</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About -->
+      <section id="about">
+        <div class="container flex flex-col gap-10 md:flex-row">
+          <div class="about__img flex-1">
+            <img src="img/about.jpg" alt="burger" class="rounded-lg">
+          </div>
+          <div class="about__content flex-1">
+            <h2 class="section__title">FIND FOOD AND DRINKS, ALL-IN-ONE PLACE FOR YOUR BEST TASTE</h2>
+            <div class="separator"></div>
+            <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat distinctio commodi, optio mollitia in hic nesciunt nisi quae ipsam perspiciatis doloribus sunt tenetur vel.</p>
+            <ul class="grid grid-cols-2 py-5 space-y-1 ">
+              <li class="text-xs text-paragraphColor">
+                <i class="fa-solid fa-check text-secondaryColor"></i>
+                Best Price
+              </li>
+              <li class="text-xs text-paragraphColor">
+                <i class="fa-solid fa-check text-secondaryColor"></i>
+                Fresh Ingredient
+              </li>
+              <li class="text-xs text-paragraphColor">
+                <i class="fa-solid fa-check text-secondaryColor"></i>
+                Best Service
+              </li>
+              <li class="text-xs text-paragraphColor">
+                <i class="fa-solid fa-check text-secondaryColor"></i>
+                Health Protocol
+              </li>
+            </ul>
+            <a href="" class="btn btn-primary">About Us</a>
+          </div>
+        </div>
+      </section>
+      <!-- Menu -->
+      <section id="menu" class="pb-20">
+        <div class="container">
+          <div class=" max-w-md mx-auto text-center">
+            <h2 class="section__title">our best menu</h2>
+            <div class="separator mx-auto"></div>
+            <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum blanditiis laboriosam deleniti modi quo et.</p>
+            <div class="tabs_wrap">
+              <ul class="flex flex-wrap justify-center gap-3 py-10">
+                <li data-tabs="all" class="btn bg-primaryColorLight dark:bg-darkColorLight active">All</li>
+                <li data-tabs="food" class="btn bg-primaryColorLight dark:bg-darkColorLight">Foods</li>
+                <li data-tabs="snack" class="btn bg-primaryColorLight dark:bg-darkColorLight">Snacks</li>
+                <li data-tabs="drink" class="btn bg-primaryColorLight dark:bg-darkColorLight">Drinks</li>
+              </ul>
+            </div>
+          </div>
+          <div class="menu__items">
+            <ul class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+              <!-- Foods -->
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/burger1.png" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/burger2.jpg" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/burger3.jpg" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/burger4.jpg" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/burger5.jpg" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+              <li class="item_wrap food">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/burger6.png" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+              <!-- Snacks -->
+              <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/snack1.jpg" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+              <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/snack2.jpg" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+              <li class="item_wrap snack">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/snack3.jpg" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+              <!-- Drinks -->
+              <li class="item_wrap drink">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/minuman1.jpg" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+              <li class="item_wrap drink">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/minuman2.jpg" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+              <li class="item_wrap drink">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/minuman3.jpg" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+              <li class="item_wrap drink">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/minuman4.jpg" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+              <li class="item_wrap drink">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/minuman5.jpg" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+              <li class="item_wrap drink">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/minuman6.jpg" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+              <li class="item_wrap drink">
+                <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 lg:h-40">
+                  <img src="img/minuman7.jpg" alt="burger" class="w-44 rounded-3xl hover:scale-110 ease-linear duration-200 lg:w-36">
+                </div>
+                <div class="pt-5">
+                  <div class="mb-2 ">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <p class="text-secondaryColor">Rp. 50.000,-</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Review -->
+       <section id="review" class="bg-primaryColorLight dark:bg-darkColorLight py-20">
+        <div class="customer__review container">
+          <div class=" max-w-md mx-auto text-center">
+            <h2 class="section__title">Customer review</h2>
+            <div class="separator mx-auto"></div>
+            <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum blanditiis laboriosam deleniti modi quo et.</p>
+          </div>
+          <div class="swiper py-10">
+            <ul class="swiper-wrapper cursor-grab">
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                  <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi quaerat inventore, saepe repellendus? Sit, rerum?</p>
+                  <div class="flex items-center">
+                    <img src="img/safwan3.jpg" alt="Customer" class="w-12 h-12 rounded-full">
+                    <div class="ml-2">
+                      <p class="font-oswald uppercase">Safwan Sy</p>
+                      <p class="paragraph">Public Health</p>
+                    </div>
+                    <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                  <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi quaerat inventore, saepe repellendus? Sit, rerum?</p>
+                  <div class="flex items-center">
+                    <img src="img/safwan3.jpg" alt="Customer" class="w-12 h-12 rounded-full">
+                    <div class="ml-2">
+                      <p class="font-oswald uppercase">Customer 1-1</p>
+                      <p class="paragraph">Public Health</p>
+                    </div>
+                    <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                  <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi quaerat inventore, saepe repellendus? Sit, rerum?</p>
+                  <div class="flex items-center">
+                    <img src="img/safwan3.jpg" alt="Customer" class="w-12 h-12 rounded-full">
+                    <div class="ml-2">
+                      <p class="font-oswald uppercase">Customer 2-2</p>
+                      <p class="paragraph">Public Health</p>
+                    </div>
+                    <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                  <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi quaerat inventore, saepe repellendus? Sit, rerum?</p>
+                  <div class="flex items-center">
+                    <img src="img/safwan3.jpg" alt="Customer" class="w-12 h-12 rounded-full">
+                    <div class="ml-2">
+                      <p class="font-oswald uppercase">Customer 3-3</p>
+                      <p class="paragraph">Public Health</p>
+                    </div>
+                    <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                  <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi quaerat inventore, saepe repellendus? Sit, rerum?</p>
+                  <div class="flex items-center">
+                    <img src="img/safwan3.jpg" alt="Customer" class="w-12 h-12 rounded-full">
+                    <div class="ml-2">
+                      <p class="font-oswald uppercase">Customer 4-4</p>
+                      <p class="paragraph">Public Health</p>
+                    </div>
+                    <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                  <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi quaerat inventore, saepe repellendus? Sit, rerum?</p>
+                  <div class="flex items-center">
+                    <img src="img/safwan3.jpg" alt="Customer" class="w-12 h-12 rounded-full">
+                    <div class="ml-2">
+                      <p class="font-oswald uppercase">Customer 5-5</p>
+                      <p class="paragraph">Public Health</p>
+                    </div>
+                    <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                  <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi quaerat inventore, saepe repellendus? Sit, rerum?</p>
+                  <div class="flex items-center">
+                    <img src="img/safwan3.jpg" alt="Customer" class="w-12 h-12 rounded-full">
+                    <div class="ml-2">
+                      <p class="font-oswald uppercase">Customer 6-6</p>
+                      <p class="paragraph">Public Health</p>
+                    </div>
+                    <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                  <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi quaerat inventore, saepe repellendus? Sit, rerum?</p>
+                  <div class="flex items-center">
+                    <img src="img/safwan3.jpg" alt="Customer" class="w-12 h-12 rounded-full">
+                    <div class="ml-2">
+                      <p class="font-oswald uppercase">Customer 7-7</p>
+                      <p class="paragraph">Public Health</p>
+                    </div>
+                    <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor dark:bg-darkColor rounded-lg p-6">
+                  <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi quaerat inventore, saepe repellendus? Sit, rerum?</p>
+                  <div class="flex items-center">
+                    <img src="img/safwan3.jpg" alt="Customer" class="w-12 h-12 rounded-full">
+                    <div class="ml-2">
+                      <p class="font-oswald uppercase">Customer 8-8</p>
+                      <p class="paragraph">Public Health</p>
+                    </div>
+                    <i class="fa-solid fa-quote-right text-4xl text-secondaryColor ml-auto"></i>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+       </section>
+      <!-- Contact -->
+      <section id="contact" class="bg-secondaryColor py-16">
+        <div class="container flex flex-col gap-5 md:items-center md:flex-row">
+          <div class="space-y-4 md:flex-1">
+            <h2 class="section__title text-black">GET EXCLUSIVE UPDATE</h2>
+            <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="flex flex-col gap-3 md:flex-row md:flex-1">
+            <input type="email" placeholder="Email address" class="p-2 text-black rounded-lg outline-none md:w-full">
+            <a href="" class="flex items-center justify-center gap-2 btn bg-black hover:opacity-75">
+              <i class="fa-solid fa-paper-plane"></i>
+              Subscribe
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <section class="footer">
+        <div class="container pt-20">
+          <ul class="grid grid-cols-1 items-start gap-5 pb-5 md:grid-cols-2 lg:grid-cols-4">
+            <li>
+              <div class="space-y-3">
+                <a href="" class="text-4xl font-oswald uppercase">
+                  Bur<span class="text-secondaryColor">ger</span>
+                </a>
+                <p class="text-xs">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quasi rerum deleniti impedit, laborum sequi similique tenetur!
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="flex flex-col gap-3">
+                <h3 class="text-lg uppercase font-oswald">SUPPORT</h3>
+                <a href="" class="text-xs hover:text-secondaryColor">FAQ's</a>
+                <a href="" class="text-xs hover:text-secondaryColor">Privacy Policy</a>
+                <a href="" class="text-xs hover:text-secondaryColor">Term & conditional </a>
+                <a href="" class="text-xs hover:text-secondaryColor">Contact</a>
+              </div>
+            </li>
+            <li class="space-y-8">
+              <div class="space-y-2">
+                <h3 class="text-lg uppercase font-oswald">Phone</h3>
+                <p class="flex items-center gap-2 text-xs">
+                  <i class="fa-solid fa-phone text-lg text-secondaryColor"></i>
+                  (+62) 821-2229-2573
+                </p>
+              </div>
+              <div class="space-y-2">
+                <h3 class="text-lg uppercase font-oswald">Email</h3>
+                <p class="flex items-center gap-2 text-xs">
+                  <i class="fa-solid fa-envelope text-lg text-secondaryColor"></i>
+                  safwan.ssy@gmail.com
+                </p>
+              </div>
+            </li>
+            <li class="space-y-8">
+              <div class="space-y-2">
+                <h3 class="text-lg uppercase font-oswald">Address</h3>
+                <p class="flex items-center gap-2 text-xs">
+                  <i class="fa-solid fa-location-dot text-lg text-secondaryColor"></i>
+                  Balee Kuyun, Kuala, Bireuen
+                </p>
+              </div>
+              <div class="space-y-2">
+                <h3 class="text-lg uppercase font-oswald">Follow us</h3>
+                <div class="space-x-3">
+                  <i class="fa-brands fa-facebook text-lg text-secondaryColor cursor-pointer hover:-translate-y-1 ease-in duration-200"></i>
+                  <i class="fa-brands fa-twitter text-lg text-secondaryColor cursor-pointer hover:-translate-y-1 ease-in duration-200"></i>
+                  <i class="fa-brands fa-instagram text-lg text-secondaryColor cursor-pointer hover:-translate-y-1 ease-in duration-200"></i>
+                </div>
+                </p>
+              </div>
+            </li>
+          </ul>
+          <div class="flex flex-col items-center border-t border-primaryColorLight dark:border-darkColorLight py-5 md:flex-row md:justify-between">
+            <p class="paragraph">Made with <span class="text-lg text-red-500">❤</span> by <span class="text-secondaryColor cursor-pointer hover:underline">pamansaf</span></p>
+            <p class="paragraph ">Copyright © 2024. All rights reserved</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+    
+    <!-- scroll Up -->
+    <a href="#" class="fixed right-4 -bottom-1/2 bg-secondaryColor shadow-sm inline-block px-4 py-2 rounded-full text-lg text-black z-50 hover:-translate-y-1 ease-in duration-200" id="scroll-up">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    
+    
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper('.swiper', {
+        speed: 400,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        },
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        grabCurson: true,
+        breakpoints: {
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 1,
+          },
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 2,
+          },
+          // when window width is >= 1024px
+          1024: {
+            slidesPerView: 3,
+          }
+        }
+      });
+    </script>
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <!-- main js -->
+    <script src="main.js"></script>
+  </body>
+</html>
